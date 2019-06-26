@@ -84,7 +84,7 @@ def getMetas(wut):                              #retourne details
 
             SIZE
     """
-    r = range(6) # voir #meta_id pour trouver chaque donnees
+    r = list(range(6)) # voir #meta_id pour trouver chaque donnees
     if getForm(wut) == NAT_ENTITY or getForm(wut) == CIV_ENTITY:
         if wut == CIVIL:
             r[COST] = [20, 0, 0, 0, 0]

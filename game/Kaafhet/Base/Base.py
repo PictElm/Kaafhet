@@ -1,5 +1,5 @@
-from Defs import *
-#from Inter import Civilization #SEEN <- nop
+from Kaafhet.Base.Defs import *
+#from Kaafhet.Inter import Civilization #SEEN <- nop
 
 class Base:
     """ Classe mere de Entity et Struct

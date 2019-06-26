@@ -1,7 +1,7 @@
-from Entity import Entity, e
-from Struct import Struct, s
-from Land import Land
-from Defs import *
+from Kaafhet.Base.Entity import Entity, e
+from Kaafhet.Base.Struct import Struct, s
+from Kaafhet.Base.Land import Land
+from Kaafhet.Base.Defs import *
 from random import randint
 
 #TODO: connect civzList... somehow... if it mean anythings...

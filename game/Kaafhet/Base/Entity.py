@@ -1,7 +1,7 @@
-from Base import Base
-from Defs import *
+from Kaafhet.Base import Base
+from Kaafhet.Base.Defs import *
 
-class Entity(Base):
+class Entity(Base.Base):
     """ Entite autonome se deplace librement selon les mecaniques de pathfinding
 
         Methodes :
@@ -20,7 +20,7 @@ class Entity(Base):
             self.pos = position
 
         else:
-            Base.__init__(self, position, civz, ID, kindOf)
+            Base.Base.__init__(self, position, civz, ID, kindOf)
             meta = getMetas(kindOf)
             self.speed = meta[SPEED] # depend de kind # depend de level
             self.goal = []
@@ -44,7 +44,7 @@ class Entity(Base):
             self.goal.append(e(goal, 0, 0, TAG))
             #self.actions.append(DROP_RESSOURCE+EXTEND(0))
 
-        elif isinstance(goal, Base):
+        elif isinstance(goal, Base.Base):
             self.goal.append(goal)
             #self.actions.append(action)
 

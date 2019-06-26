@@ -1,7 +1,7 @@
 import random as rand
-from Entity import Entity, e
-from Struct import Struct, s
-from Defs import *
+from Kaafhet.Base.Entity import Entity, e
+from Kaafhet.Base.Struct import Struct, s
+from Kaafhet.Base.Defs import *
 
 class Land:
     """ Terrain de jeux
@@ -16,11 +16,13 @@ class Land:
         self.landscape = [[0 for j in range(self.width)] for i in range(self.height)]
         self.isGenerated = False
 
+    @staticmethod
     def setSeed(rs):
         """ preset the seed for random generation
         """
         rand.seed(rs)
 
+    @staticmethod
     def generateRandomStructures(wilderness, occurences=tuple):
         """ occurences ratios (betwen 0 and 1) of folowing structures:
                 TREE
@@ -34,6 +36,7 @@ class Land:
         """
         pass
 
+    @staticmethod
     def spawnRandomEntities(wilderness, occurences=tuple):
         """ occurences ratios (betwen 0 and 1) of folowing entities:
                 SHEEP

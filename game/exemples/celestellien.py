@@ -5,11 +5,11 @@ Created on Mon Feb 22 15:37:51 2016
 @author: Celestin
 """
 
-from Inter import *
+from Kaafhet.Inter import *
 
 def angelicOnAttkd(attacked, attacker):
-    print("{} is attacked by {} of team {}\)
-    ".format(attacked.civzID, attacker.civzID, attacker.team)
+    print("{} is attacked by {} of team {}" \
+            .format(attacked.civzID, attacker.civzID, attacker.team))
     for it in celestellien.entities:
         it.addGoal(attacker)
 
@@ -27,4 +27,4 @@ def angelicCivilCode(turn):
     if celestellien.waffle >= 20:
         celestellien.newEntity().setCallback(angelicOnAttkd, angelicOnReach)
 
-celestellien = Civilization(angelicCivilCode, angelicStart, p(4,2))
+celestellien = c(angelicCivilCode, angelicStart, "celestellien", p(4,2))

@@ -5,7 +5,7 @@ Created on Thu Mar 10 17:41:37 2016
 @author: Celestin
 """
 
-from Inter import *
+from Kaafhet.Inter import *
 
 TEAM_ENEMY = WHILD
 

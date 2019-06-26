@@ -1,7 +1,7 @@
-from Base import Base
-from Defs import *
+from Kaafhet.Base import Base
+from Kaafhet.Base.Defs import *
 
-class Struct(Base):
+class Struct(Base.Base):
     """ Structure productive fixe
 
         Methodes :
@@ -11,7 +11,7 @@ class Struct(Base):
 #{
     def __init__(self, position = Coord, civz = 42, ID = int, kindOf = float):
     #{
-        Base.__init__(self, position, civz, ID, kindOf)
+        Base.Base.__init__(self, position, civz, ID, kindOf)
         meta = getMetas(kindOf)
         self.size = meta[SIZE] # depend de kind
         self.isUnderConstruction = True

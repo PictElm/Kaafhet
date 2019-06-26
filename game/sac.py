@@ -5,7 +5,7 @@ Created on Mon Feb 22 15:48:15 2016
 @author: Celestin
 """
 
-from Inter import *
+from Kaafhet.Inter import *
 
 TEAM_ENEMY = WHILD
 mainGoal = None

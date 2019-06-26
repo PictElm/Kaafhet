@@ -5,7 +5,7 @@ Created on Mon Feb 22 15:48:15 2016
 @author: Celestin
 """
 
-from Inter import *
+from Kaafhet.Inter import *
 
 def loop(turn):
     if sac.waffle >= 20:
@@ -14,4 +14,4 @@ def loop(turn):
         for it in sac.entities:
             it.addGoal(sac.getTeamTownHall(TEAM_2))
 
-sac = c(loop, nullf, p(16, 16))
+sac = c(loop, nullf, "sac", p(16, 16))

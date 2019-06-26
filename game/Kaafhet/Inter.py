@@ -1,11 +1,11 @@
-from Base.Entity import Entity, e
-from Base.Struct import Struct, s
+from Kaafhet.Base.Entity import Entity, e
+from Kaafhet.Base.Struct import Struct, s
 
-from Base.Civz import Civilization, c
-from Base.Land import Land
+from Kaafhet.Base.Civz import Civilization, c
+from Kaafhet.Base.Land import Land
 
-from Base.Draw import display
-from Base.Defs import *
+from Kaafhet.Base.Draw import display
+from Kaafhet.Base.Defs import *
 
 wilderness = Civilization(nullf, nullf, "whild", p(0, 0)) # dath team
 
