@@ -49,11 +49,11 @@ class Struct(Base):
         if self.life <= 0:
             #ded
             self.isAlive = False
-            print "struct died : {}".format(self.civzID)
+            print("struct died : {}".format(self.civzID))
             return False
 
         if self.isAttacker:
-            #print "struct attacked"
+            #print("struct attacked")
             self.onAttacker(self, self.attackers)
         #TODO : tower
 

@@ -20,7 +20,7 @@ def counter(): # fnc temporaire : compte des tours + arret au bout de x? tours
     global turn, isMainLoop
     if isMainLoop:
         turn+= 1
-        print "\n\tturn {}".format(turn)
+        print("\n\tturn {}".format(turn))
     return turn > 100-1
 
 def getTurn(): # renvoie le nombre de tours passes (premier tour : 1)
@@ -75,9 +75,9 @@ def run(world, stopCondition, displayFunction): # boucle principale
     global isMainLoop
     civiList, landscape = world
 
-    print "start", "\n"
+    print("start", "\n")
     for it in civiList:
-        print it, "\n"
+        print(it, "\n")
 
     for it in civiList:
         if not isinstance(it, Civilization):
@@ -93,14 +93,14 @@ def run(world, stopCondition, displayFunction): # boucle principale
 
             if not isinstance(it, Civilization):
                 continue
-            print "> team {} :".format(it.name)
+            print("> team {} :".format(it.name))
 
             if it.autorun():
                 it.run(getTurn())
             else:
-                print "\n '-> removing civz (ded)"
+                print("\n '-> removing civz (ded)")
                 civiList[i] = None # override civz if town_hall destroyed (autorun=False)
 
     for it in civiList:
-        print it, "\n"
-    print "\n", "end"
+        print(it, "\n")
+    print("\n", "end")

@@ -52,7 +52,7 @@ class Entity(Base):
             for it in goal:
                 self.goal.append(it)
             #raise TypeError("wrong instance in addGoal(goal)")
-        print "goal added"
+        print("goal added")
     #}
     def removeLastGoal(self):
         """ Retire le dernier but de l'entite
@@ -82,12 +82,12 @@ class Entity(Base):
             return False
 
         if goal.kind == TAG:
-            print "reach {}".format(goal.pos)
+            print("reach {}".format(goal.pos))
             self.onReachTag(self, goal.pos)
             return True
 
         if goal.team == self.team:
-            print "reach {}".format(goal.pos) #SEE mise en sakizon
+            print("reach {}".format(goal.pos)) #SEE mise en sakizon
             return True #TODO : all #SEE #USE : Struct.use
 
         elif goal.team == WHILD: #SEE : mm si c'est une entity ?
@@ -181,12 +181,12 @@ class Entity(Base):
 
         if self.life <= 0: # a l'instant de la mort
             #ded
-            print "entity died : {}".format(self.civzID)
+            print("entity died : {}".format(self.civzID))
             self.die()
             return False
 
         if self.isAttacker:
-            #print "entity attacked"
+            #print("entity attacked")
             removeLater = []
             for i in range(len(self.goal)): # suppr les ded
                 if not self.goal[i].isAlive:
@@ -207,7 +207,7 @@ class Entity(Base):
                         self.isGoal = False # plus aucun but
             # sinon se deplace vers goal[0]
             else:
-                print "from {}".format(self.pos),
+                print("from {}".format(self.pos),)
                 mov = self.pos.getUnitVector(self.goal[0].pos, self.speed)
                 dist = self.pos.getDistanceStraight(self.goal[0].pos)
                 # distance a parcourir > distance d'interraction
@@ -218,7 +218,7 @@ class Entity(Base):
                         mov = self.pos.getUnitVector(self.goal[0].pos, dist-self.scope + 0.01)
                     self.pos.x+= mov.x
                     self.pos.y+= mov.y
-                print "move to {}".format(self.pos)
+                print("move to {}".format(self.pos))
 
         return True
     #}

@@ -8,11 +8,11 @@ Created on Mon Feb 22 15:38:28 2016
 from Inter import *
 
 def humanOnAttkd(attacked, attacker):
-    print "{} is attacked by {} of team {}\
+    print("{} is attacked by {} of team {}\)
     ".format(attacked.civzID, attacker.civzID, attacker.team)
 
 def humanOnReach(entity, position):
-    print "{} reach {}".format(entity.civzID, position)
+    print("{} reach {}".format(entity.civzID, position))
 
 def humanStart():
     for it in human.entities:

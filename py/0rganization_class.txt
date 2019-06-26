@@ -1,6 +1,0 @@
-position(x; y)
-team
-kind
-level
-life
-display
